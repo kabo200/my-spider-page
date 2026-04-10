@@ -1,0 +1,5 @@
+[gallery.html](https://github.com/user-attachments/files/26636074/gallery.html)
+[index.html](https://github.com/user-attachments/files/26636094/index.html)
+![spider-web](https://github.com/user-attachments/assets/acc3bcd9-9413-4f81-a186-b0b71cbc69f2)
+[contact.html](https://github.com/user-attachments/files/26636124/contact.html)
+[about.html](https://github.com/user-attachments/files/26636112/about.html)
