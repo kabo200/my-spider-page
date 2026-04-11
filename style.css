@@ -194,6 +194,18 @@ footer{
   text-decoration: underline;
   color: black;
 }
+.search-box {
+  text-align: center;
+  margin: 20px;
+}
+
+.search-box input {
+  width: 60%;
+  padding: 10px;
+  border-radius: 25px;
+  border: 2px solid green;
+  font-size: 16px;
+}
     
     
 
