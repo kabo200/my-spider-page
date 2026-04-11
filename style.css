@@ -134,10 +134,6 @@ footer{
 .about {
     color:black;
 }
-body {
-    background-color:lightgreen;
-    font-family: Arial, sans-serif;
-}
 
 /* Grid layout */
 .star-container {
@@ -152,10 +148,6 @@ body {
 .star {
     background:light yellow;
     border-radius:12px;
-    overflow:hidden;
-    star-shadow: 0 4px 10px
-    rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
     text-align: center;
 }
 /* image inside star */
