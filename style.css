@@ -128,4 +128,7 @@ footer{
 .page-links a:hover{
     background: lightgreen;
     color: black;
-}   
+} 
+.about {
+    color:black;
+}
