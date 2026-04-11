@@ -134,3 +134,69 @@ footer{
 .about {
     color:black;
 }
+body {
+    background-color:lightgreen;
+    font-family: Arial, sans-serif;
+}
+
+/* Grid layout */
+.star-container {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px
+}
+
+/* card design */
+.star {
+    background:light yellow;
+    border-radius:12px;
+    overflow:hidden;
+    star-shadow: 0 4px 10px
+    rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+/* image inside star */
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+/*Hover effect */
+.card: hover {
+    transform: scale(1.05);
+}
+/*text spacing */
+.card h2 {
+    margin: 10px 0 5px;
+}
+.card p {
+    padding: 0 10px 15px;
+}
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
