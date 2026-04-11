@@ -2,9 +2,10 @@ body{
     margin:0;
     font-family: Arial, sans-serif;
 
-    background-image: url("spider-web.jpg");
+    background-image: img ("spider-web.jpg");
     background-size: cover;
     background-attachment: fixed;
+    background-color:lightgreen;
     color:white;
 
 }
