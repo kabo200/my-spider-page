@@ -136,13 +136,13 @@ footer{
 }
 
 /* Grid layout */
-.star-container {
+.card-container {
     gap: 20px;
     padding: 20px
 }
 
 /* card design */
-.star {
+.card {
     background:red;
     border-radius:12px;
     text-align: center;
