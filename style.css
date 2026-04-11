@@ -105,6 +105,7 @@ footer{
     font-size: 24px;
     color: white;
     text-decoration: none;
+    animation:bounce 2s infinite;
 }
 .arrow:hover{
     background: lightgreen;
