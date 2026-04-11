@@ -39,6 +39,13 @@
             <p>they are common spiders found gardens and fields ,they are usually black,yellow,or orange in color .Garden spiders wait in the center of their web for prey</p>
         </div>
 
+        <div class="search-box">
+  <input type="text" id="searchInput" placeholder="Search spiders..." onkeyup="searchSpiders()">
+        </div>
+        <div class="card">Wolf Spider</div>
+<div class="card">Garden Spider</div>
+<div class="card">Sydney Funnel Web Spider</div>
+<div class="card">Brazilian Wandering Spider</div>
         <!-- ARROW NAVIGATION  -->
 <a href="about.html#cards" class="arrow"> →</a>
         
@@ -62,6 +69,16 @@
 
     </footer> 
 
+<script>
+function searchSpiders() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let cards = document.querySelectorAll(".card");
 
+  cards.forEach(card => {
+    let text = card.textContent.toLowerCase();
+    card.style.display = text.includes(input) ? "block" : "none";
+  });
+}
+</script>
 </body> 
 </html> 
