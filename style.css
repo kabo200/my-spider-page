@@ -137,16 +137,13 @@ footer{
 
 /* Grid layout */
 .star-container {
-    display: grid;
-    grid-template-columns:
-        repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
     padding: 20px
 }
 
 /* card design */
 .star {
-    background:light yellow;
+    background:red;
     border-radius:12px;
     text-align: center;
 }
@@ -175,7 +172,7 @@ footer{
 }
 .box {
     flex: 1;
-    basckground: white;
+    basckground: black;
     padding: 15px;
     border-radius: 10px;
 }
