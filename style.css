@@ -146,6 +146,7 @@ footer{
     background:red;
     border-radius:12px;
     text-align: center;
+    text-color: black;
 }
 /* image inside star */
 .card img {
