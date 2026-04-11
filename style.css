@@ -1,0 +1,131 @@
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+
+    background-image: url("spider-web.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color:white;
+
+}
+
+/* HEADER */
+header{
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    text-align: center;
+}
+
+/* NAVIGATION */
+nav a{
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+}
+nav a:hover{
+    color: lightgreen;
+}
+
+/* MAIN LAYOUT */
+.container{
+    display: flex;
+}
+
+/* SIDEBAR */
+.sidebar{
+    width: 25%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+}
+
+/* CONTENT AREA */
+.content{
+    width: 75%;
+    padding: 20px;
+}
+
+/* SECTION BOXES */
+section{
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* SPIDER CARDS */
+.card{
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+/* IMAGES */
+img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* GALLERY */
+.gallery img{
+    width: 2250px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+
+}
+
+.gallery img:hover{
+    transform: scale(1.1);
+}  
+
+/* FOOTER */
+footer{
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* ARROW BUTTON */
+.arrow-box {
+    text-align: center;
+    margin: 30px;
+}
+.arrow{
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+.arrow:hover{
+    background: lightgreen;
+    color: black;
+}
+
+/* PAGE LINKS */
+.page-links{
+    text-align: center;
+    margin: 10px;
+}
+.page-links a{
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    display: inline-block;
+}
+.page-links a:hover{
+    background: lightgreen;
+    color: black;
+}   
