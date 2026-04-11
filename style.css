@@ -175,6 +175,18 @@ body {
 .card p {
     padding: 0 10px 15px;
 }
+.spider-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap:20px;
+}
+.box {
+    flex: 1;
+    basckground: white;
+    padding: 15px;
+    border-radius: 10px;
+}
     
     
 
