@@ -74,8 +74,10 @@ img{
 
 /* GALLERY */
 .gallery img{
-    width: 2250px;
+    width: 100%;
+    max-width:250px;
     margin: 10px;
+    height:auto;
     border-radius: 10px;
     transition: 0.3s;
 
