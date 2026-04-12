@@ -228,6 +228,21 @@ footer{
     transform: perspective(500px) rotateY(0deg) scale(1.1);
     box-shadow: 10px 10px 25px rgba(0,0,0,0.7);
 }
+body::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("https://i.imgur.com/3QfKXQm.png");
+  opacity: 0.12;
+  animation: webDrip 5s infinite ease-in-out;
+}
+
+@keyframes webDrip {
+  0% { transform: translateY(-5px); }
+  50% { transform: translateY(15px); }
+  100% { transform: translateY(-5px); }
+    }
     
     
 
