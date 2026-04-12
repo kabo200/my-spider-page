@@ -262,36 +262,9 @@ footer{
         left: 110%;
         top: 40%;
     }
-header {
-  display: flex;
-  justify-content: space-between; /* pushes nav right */
-  align-items: center;
-  padding: 10px 20px;
-}
-
-/* Navbar layout */
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
-}
-
-/* Link style */
-.navbar a {
-  text-decoration: none;
-  color: white;
-  background: #111;
-  padding: 8px 15px;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-/* Hover effect */
-.navbar a:hover {
-  background: red;
-  transform: scale(1.1);
-}
     
+
+
     
 
 
