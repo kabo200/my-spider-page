@@ -210,16 +210,11 @@ footer{
     object-fit: cover;
 }
 .logo {
-    position: fixed;
+    position: absolute;
     top: 10px;
     left: 10px;
-    z-index: 1000;
+    width: 70px;
 }
-
-.logo img {
-    width: 80px;
-    height: auto;
-    
     /* 3D effect */
     transform: perspective(500px) rotateY(15deg);
     transition: transform 0.5s ease, box-shadow 0.5s ease;
