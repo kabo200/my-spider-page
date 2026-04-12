@@ -209,6 +209,30 @@ footer{
     height:200px
     object-fit: cover;
 }
+.logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+    
+    /* 3D effect */
+    transform: perspective(500px) rotateY(15deg);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+
+    /* Shadow for depth */
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+}
+
+/* Hover animation */
+.logo img:hover {
+    transform: perspective(500px) rotateY(0deg) scale(1.1);
+    box-shadow: 10px 10px 25px rgba(0,0,0,0.7);
+}
     
     
 
