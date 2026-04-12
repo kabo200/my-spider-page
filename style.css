@@ -240,13 +240,13 @@ footer{
     left: 0;
     animation: moveSpider 8s linear infinite;
     pointer-events: none;
-    Z-index: 1;
+    Z-index: 5;
 }
 
 /* Movement animation */
 @keyframes moveSpider {
     0% {
-        left: -100px;
+        left: -80px;
         top: 20%;
     }
     25% {
