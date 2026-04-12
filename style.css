@@ -240,7 +240,7 @@ footer{
     left: 0;
     animation: moveSpider 8s linear infinite;
     pointer-events: none;
-    Z-index: -1;
+    Z-index: 1;
 }
 
 /* Movement animation */
