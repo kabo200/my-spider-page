@@ -228,27 +228,12 @@ footer{
     transform: perspective(500px) rotateY(0deg) scale(1.1);
     box-shadow: 10px 10px 25px rgba(0,0,0,0.7);
 }
-body::before {
-  content: "";
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-image: url("Spider.jpg");
-  opacity: 0.12;
-  animation: webDrip 5s infinite ease-in-out;
-}
-
-@keyframes webDrip {
-  0% { transform: translateY(-5px); }
-  50% { transform: translateY(15px); }
-  100% { transform: translateY(-5px); }
-    }
 
 /* Spider shape (simple circle version or image) */
-.spider {
+.Spider {
     width: 60px;
     height: 60px;
-    background-image: url("Spider.jpg"); /* use your spider image */
+    background: url("images/Spider.jpg"); 
     background-size: cover;
     position: absolute;
     top: 50%;
@@ -275,7 +260,7 @@ body::before {
         left: 110%;
         top: 40%;
     }
-}
+
     
     
 
