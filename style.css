@@ -243,6 +243,39 @@ body::before {
   50% { transform: translateY(15px); }
   100% { transform: translateY(-5px); }
     }
+
+/* Spider shape (simple circle version or image) */
+.spider {
+    width: 60px;
+    height: 60px;
+    background-image: url("images/spider.jpg"); /* use your spider image */
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    animation: moveSpider 8s linear infinite;
+}
+
+/* Movement animation */
+@keyframes moveSpider {
+    0% {
+        left: -100px;
+        top: 20%;
+    }
+    25% {
+        top: 60%;
+    }
+    50% {
+        top: 30%;
+    }
+    75% {
+        top: 70%;
+    }
+    100% {
+        left: 110%;
+        top: 40%;
+    }
+}
     
     
 
