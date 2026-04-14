@@ -263,7 +263,7 @@ footer{
         top: 40%;
     }
     
-.navbar {
+.navbar a {
     position: relative;
     padding: 15px 20px;
     background: rgba(255, 255, 255, 0.05);
@@ -277,7 +277,14 @@ footer{
 }
 
 
+.navbar a {
+  transition: all 0.2s ease;
+}
 
+.navbar a:active {
+  animation: shake 0.2s;
+  transform: scale(0.9);
+}
 
     
 
