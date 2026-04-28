@@ -1,81 +1,113 @@
-<!DOCTYPE html> 
+    <!DOCTYPE html>
+<html lang="en">
 
-<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiders Educational Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-<head> 
-    <title>spiders educational hub</title> 
-<link rel="stylesheet" href="style.css">
-</head> 
+<body>
 
-<body> 
+    <!-- HEADER -->
+    <header class="header">
 
-    <header> 
-
-  <div class="logo">
-            <img src="Spider_logo.jpg" alt="Spider logo">
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="Spider_logo.jpg" alt="Spider Logo">
+            <h1>Spiders Educational Hub</h1>
         </div>
 
-        <div class="content">
-            <h2>welcome to the spiders educational hub!</h2>
-            <p>Learn about spiders,their types,dangers,and safety tips!</p>
-        </div>
-      
-       
-
-        <div class="card">
-            <img src="jumping_spider.jpg" alt="Jumping Spider">
-            <h3>Jumping Spider</h3>
-            <p>Jumping spiders are small, agile hunters known for their excellent vision and ability to jump long distances to catch prey.</p>
-        </div>
-
-        <div class="card">
-            <img src="tarantula.jpg" alt="Tarantula">
-            <h3>Tarantula</h3>
-            <p>Tarantulas are large, hairy spiders that are often kept as pets. They are generally docile but can deliver a painful bite if threatened.</p>
-        </div>
-        <div class="card">
-            <img src="wolf_spider.jpg" alt="wolf spider">
-            <h3>wolf spider</h3>
-            <p>wolf spiders are fast hunting spiders that do not build webs.they are usually brown,grey and black in color,they have eight eyes and very good eyesight</p>
-        </div>
-
-        <canvas id="webCanvas"></canvas>
-        <div class="card">
-            <img src="garden_spider.jpg" alt="garden spider">
-            <h3>garden spider</h3>
-            <p>they are common spiders found gardens and fields ,they are usually black,yellow,or orange in color .Garden spiders wait in the center of their web for prey</p>
-        </div>
-
-        <div class="search-box">
-  <input type="text" id="searchInput" placeholder="Search spiders..." onkeyup="searchSpiders()">
-        </div>
-        <div class="card">Wolf Spider</div>
-<div class="card">Garden Spider</div>
-<div class="card">Sydney Funnel Web Spider</div>
-<div class="card">Brazilian Wandering Spider</div>
-        <!-- ARROW NAVIGATION  -->
-<a href="about.html#cards" class="arrow"> →</a>
-        
-
-        
-<!--PAGE LINKS-->
-<div class="page-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>  
-    <a href="gallery.html">Gallery</a>
-</div>
+        <!-- NAVIGATION -->
+        <nav class="navbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
 
     </header>
- 
 
-    <footer> 
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Welcome to the World of Spiders</h2>
+            <p>
+                Discover spider species, understand their behavior,
+                learn safety tips, and explore the fascinating world
+                of these amazing creatures.
+            </p>
 
-        <p>&copy; 2026 spiders educational hub.</p>
-         
+            <!-- SEARCH -->
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search spiders...">
+                <button>Search</button>
+            </div>
+        </div>
+    </section>
 
-    </footer> 
+    <!-- MAIN CONTENT -->
+    <main>
 
-  
-</body> 
-</html> 
+        <section class="cards-section">
+
+            <h2 class="section-title">Popular Spider Species</h2>
+
+            <div class="cards-container">
+
+                <div class="card">
+                    <img src="jumping_spider.jpg" alt="Jumping Spider">
+                    <h3>Jumping Spider</h3>
+                    <p>
+                        Small agile hunters with excellent eyesight.
+                        They leap long distances to catch prey.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="tarantula.jpg" alt="Tarantula">
+                    <h3>Tarantula</h3>
+                    <p>
+                        Large hairy spiders often kept as pets.
+                        Usually calm but may bite if threatened.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="wolf_spider.jpg" alt="Wolf Spider">
+                    <h3>Wolf Spider</h3>
+                    <p>
+                        Fast hunting spiders that do not build webs.
+                        They rely on speed and strong eyesight.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <img src="garden_spider.jpg" alt="Garden Spider">
+                    <h3>Garden Spider</h3>
+                    <p>
+                        Common in gardens and fields. They build
+                        beautiful webs and wait for insects.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- NEXT PAGE BUTTON -->
+        <div class="next-page">
+            <a href="about.html">Next Page →</a>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2026 Spiders Educational Hub | All Rights Reserved</p>
+    </footer>
+
+</body>
+
+</html>
