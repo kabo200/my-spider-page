@@ -205,7 +205,7 @@ footer{
   font-size: 16px;
 }
 .logo {
-    position: absolute;
+    position: fixed;
     top: 10px;
     left: 10px;
     width: 10px;
