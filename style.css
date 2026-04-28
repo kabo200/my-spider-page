@@ -145,6 +145,8 @@ footer{
     border-radius:12px;
     text-align: center;
     text-color: black;
+    position:relative;
+    z-index: 1;
 }
 /* image inside star */
 .card img {
@@ -279,6 +281,12 @@ footer{
 .navbar a:active {
   animation: shake 0.2s;
   transform: scale(0.9);
+}
+#webCanvas {
+    positition:fixed;
+    inset: 0;
+    Z-index: 0;
+    pointer-events: none;
 }
 
     
