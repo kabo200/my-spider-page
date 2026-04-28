@@ -1,23 +1,21 @@
 body{
     margin:0;
     font-family: Arial, sans-serif;
-
-    background-image: url ("spider-web.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-color:lightgreen;
     color:black;
+     position:relative;
+    z-index: 1;
 
 }
 
-/* HEADER */
 header{
     background-color: rgba(0, 0, 0, 0.8);
     padding: 15px;
     text-align: center;
 }
 
-/* NAVIGATION */
 nav a{
     color: white;
     text-decoration: none;
@@ -136,7 +134,9 @@ footer{
 /* Grid layout */
 .card-container {
     gap: 20px;
-    padding: 20px
+    padding: 20px;
+     position:relative;
+    z-index: 1;
 }
 
 /* card design */
