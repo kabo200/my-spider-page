@@ -208,7 +208,7 @@ footer{
     position: absolute;
     top: 10px;
     left: 10px;
-    width: 70px;
+    width: 10px;
 }
     /* 3D effect */
     transform: perspective(500px) rotateY(15deg);
