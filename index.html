@@ -1,113 +1,191 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spiders Educational Hub</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spiders Educational Hub</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
+  <!-- ===== NAV ===== -->
+  <nav class="site-nav">
+    <a class="nav-brand" href="index.html">
+      <img src="Spider_logo.jpg" alt="Spider logo" />
+      <span>Spiders Hub</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html"   class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-        <!-- LOGO -->
-        <div class="logo">
-            <img src="Spider_logo.jpg" alt="Spider Logo">
-            <h1>Spiders Educational Hub</h1>
+  <!-- ===== HERO ===== -->
+  <header class="page-hero">
+    <h1>Spiders Educational Hub</h1>
+    <p>Discover species, understand behaviour, and learn safety tips about the world's most fascinating arachnids.</p>
+
+    <!-- Search -->
+    <div class="search-bar">
+      <input id="searchInput" type="text" placeholder="Search a spider species…" />
+      <button onclick="runSearch()">Search</button>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="container">
+
+    <!-- Slicer tabs -->
+    <div class="section-title">
+      <h2>Popular Spider Species</h2>
+      <p>Click a category to filter</p>
+    </div>
+
+    <div class="slicer-bar" role="group" aria-label="Filter by category">
+      <button class="slicer-btn active" data-filter="all">All</button>
+      <button class="slicer-btn" data-filter="harmless">Harmless</button>
+      <button class="slicer-btn" data-filter="venomous">Venomous</button>
+      <button class="slicer-btn" data-filter="exotic">Exotic / Pets</button>
+    </div>
+
+    <!-- Cards -->
+    <div class="card-grid" id="spiderGrid">
+
+      <div class="card" data-category="harmless">
+        <img src="jumping_spider.jpg" alt="Jumping Spider" />
+        <div class="card-body">
+          <h3>Jumping Spider</h3>
+          <p>Small agile hunters with excellent eyesight. They leap long distances to catch prey and rarely threaten humans.</p>
+          <span class="card-tag tag-harmless">Harmless</span>
         </div>
+      </div>
 
-        <!-- NAVIGATION -->
-        <nav class="navbar">
-            <a href="index.html" class="active">Home</a>
-            <a href="about.html">About</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-
-    </header>
-
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-text">
-            <h2>Welcome to the World of Spiders</h2>
-            <p>
-                Discover spider species, understand their behavior,
-                learn safety tips, and explore the fascinating world
-                of these amazing creatures.
-            </p>
-
-            <!-- SEARCH -->
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Search spiders...">
-                <button>Search</button>
-            </div>
+      <div class="card" data-category="exotic">
+        <img src="tarantula.jpg" alt="Tarantula" />
+        <div class="card-body">
+          <h3>Tarantula</h3>
+          <p>Large hairy spiders often kept as pets. Usually calm but may bite if threatened. Popular among enthusiasts.</p>
+          <span class="card-tag tag-exotic">Exotic / Pets</span>
         </div>
-    </section>
+      </div>
 
-    <!-- MAIN CONTENT -->
-    <main>
-
-        <section class="cards-section">
-
-            <h2 class="section-title">Popular Spider Species</h2>
-
-            <div class="cards-container">
-
-                <div class="card">
-                    <img src="jumping_spider.jpg" alt="Jumping Spider">
-                    <h3>Jumping Spider</h3>
-                    <p>
-                        Small agile hunters with excellent eyesight.
-                        They leap long distances to catch prey.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <img src="tarantula.jpg" alt="Tarantula">
-                    <h3>Tarantula</h3>
-                    <p>
-                        Large hairy spiders often kept as pets.
-                        Usually calm but may bite if threatened.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <img src="wolf_spider.jpg" alt="Wolf Spider">
-                    <h3>Wolf Spider</h3>
-                    <p>
-                        Fast hunting spiders that do not build webs.
-                        They rely on speed and strong eyesight.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <img src="garden_spider.jpg" alt="Garden Spider">
-                    <h3>Garden Spider</h3>
-                    <p>
-                        Common in gardens and fields. They build
-                        beautiful webs and wait for insects.
-                    </p>
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- NEXT PAGE BUTTON -->
-        <div class="next-page">
-            <a href="about.html">Next Page →</a>
+      <div class="card" data-category="harmless">
+        <img src="wolf_spider.jpg" alt="Wolf Spider" />
+        <div class="card-body">
+          <h3>Wolf Spider</h3>
+          <p>Fast hunting spiders that do not build webs. They rely on speed and strong eyesight to pursue prey.</p>
+          <span class="card-tag tag-harmless">Harmless</span>
         </div>
+      </div>
 
-    </main>
+      <div class="card" data-category="harmless">
+        <img src="garden_spider.jpg" alt="Garden Spider" />
+        <div class="card-body">
+          <h3>Garden Spider</h3>
+          <p>Common in gardens and fields. They build beautiful orb webs and patiently wait for insects to land.</p>
+          <span class="card-tag tag-harmless">Harmless</span>
+        </div>
+      </div>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <p>&copy; 2026 Spiders Educational Hub | All Rights Reserved</p>
-    </footer>
-<script src="script.js" defer></script>
+      <div class="card" data-category="venomous">
+        <img src="black_widow_spider.jpg" alt="Black Widow" />
+        <div class="card-body">
+          <h3>Black Widow</h3>
+          <p>Recognised by its shiny black body and red hourglass mark. Has strong venom but rarely bites unprovoked.</p>
+          <span class="card-tag tag-venomous">Venomous</span>
+        </div>
+      </div>
+
+      <div class="card" data-category="venomous">
+        <img src="brown_recluse_spider.jpg" alt="Brown Recluse" />
+        <div class="card-body">
+          <h3>Brown Recluse</h3>
+          <p>Light brown with a violin-shaped marking. Its bite may cause significant tissue damage in severe cases.</p>
+          <span class="card-tag tag-venomous">Venomous</span>
+        </div>
+      </div>
+
+      <div class="card" data-category="venomous">
+        <img src="sydney_funnel_web_spider.jpg" alt="Sydney Funnel Web" />
+        <div class="card-body">
+          <h3>Sydney Funnel Web</h3>
+          <p>Highly venomous spider from Australia found in moist sheltered spots like gardens and under logs.</p>
+          <span class="card-tag tag-venomous">Venomous</span>
+        </div>
+      </div>
+
+      <div class="card" data-category="venomous">
+        <img src="brazilian_wandering_spider.jpg" alt="Brazilian Wandering Spider" />
+        <div class="card-body">
+          <h3>Brazilian Wandering Spider</h3>
+          <p>A fast active hunter that does not build webs. Known for defensive behaviour and powerful venom.</p>
+          <span class="card-tag tag-venomous">Venomous</span>
+        </div>
+      </div>
+
+    </div><!-- /card-grid -->
+
+    <hr class="divider" />
+
+    <!-- Internal page links -->
+    <div class="section-title">
+      <h2>Explore More</h2>
+      <p>Navigate the full site</p>
+    </div>
+
+    <ul class="info-list">
+      <li><a href="about.html">About Spiders – facts, habitats &amp; safety tips</a></li>
+      <li><a href="gallery.html">Photo Gallery – browse all species</a></li>
+      <li><a href="contact.html">Contact Us – send us a message</a></li>
+    </ul>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    © 2026 Spiders Educational Hub | All Rights Reserved &nbsp;|&nbsp;
+    <a href="contact.html">Contact</a>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    /* --- Slicer filter --- */
+    const slicerBtns = document.querySelectorAll('.slicer-btn');
+    const cards      = document.querySelectorAll('.card');
+
+    slicerBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        slicerBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        cards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    /* --- Search --- */
+    function runSearch() {
+      const q = document.getElementById('searchInput').value.trim().toLowerCase();
+      cards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.classList.toggle('hidden', q && !text.includes(q));
+      });
+      // reset slicer highlight
+      slicerBtns.forEach(b => b.classList.remove('active'));
+      document.querySelector('[data-filter="all"]').classList.add('active');
+    }
+
+    document.getElementById('searchInput').addEventListener('keyup', e => {
+      if (e.key === 'Enter') runSearch();
+    });
+  </script>
+
 </body>
-
 </html>
