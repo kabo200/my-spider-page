@@ -1,82 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spider Gallery | Spiders Educational Hub</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spider Gallery | Spiders Educational Hub</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-    <!-- Animated Background Spider -->
-    <div class="spider"></div>
+  <!-- ===== NAV ===== -->
+  <nav class="site-nav">
+    <a class="nav-brand" href="index.html">
+      <img src="Spider_logo.jpg" alt="Spider logo" />
+      <span>Spiders Hub</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- Header Section -->
-    <header>
-        <div class="logo">
-           <h1>spiders educational Hub</h1>
-        </div>
+  <!-- ===== HERO ===== -->
+  <header class="page-hero">
+    <h1>Spider Gallery</h1>
+    <p>Browse our curated collection — click any image to enlarge.</p>
+  </header>
 
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="gallery.html" class="active">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- ===== MAIN ===== -->
+  <main class="container">
 
-    <!-- Gallery Section -->
-    <section class="gallery-container">
+    <!-- Slicer -->
+    <div class="slicer-bar" role="group" aria-label="Filter gallery">
+      <button class="slicer-btn active" data-filter="all">All</button>
+      <button class="slicer-btn" data-filter="harmless">Harmless</button>
+      <button class="slicer-btn" data-filter="venomous">Venomous</button>
+      <button class="slicer-btn" data-filter="exotic">Exotic</button>
+    </div>
 
-        <div class="gallery-card">
-            <img src="jumping_spider.jpg" alt="Jumping Spider">
-            <h3>Jumping Spider</h3>
-        </div>
+    <!-- Gallery grid -->
+    <div class="gallery-grid" id="galleryGrid">
 
-        <div class="gallery-card">
-            <img src="tarantula.jpg" alt="Tarantula">
-            <h3>Tarantula</h3>
-        </div>
+      <div class="gallery-item" data-category="harmless"
+           data-src="jumping_spider.jpg" data-title="Jumping Spider"
+           onclick="openLightbox(this)">
+        <img src="jumping_spider.jpg" alt="Jumping Spider" loading="lazy" />
+        <div class="gallery-caption">Jumping Spider</div>
+      </div>
 
-        <div class="gallery-card">
-            <img src="wolf_spider.jpg" alt="Wolf Spider">
-            <h3>Wolf Spider</h3>
-        </div>
+      <div class="gallery-item" data-category="exotic"
+           data-src="tarantula.jpg" data-title="Tarantula"
+           onclick="openLightbox(this)">
+        <img src="tarantula.jpg" alt="Tarantula" loading="lazy" />
+        <div class="gallery-caption">Tarantula</div>
+      </div>
 
-        <div class="gallery-card">
-            <img src="garden_spider.jpg" alt="Garden Spider">
-            <h3>Garden Spider</h3>
-        </div>
+      <div class="gallery-item" data-category="harmless"
+           data-src="wolf_spider.jpg" data-title="Wolf Spider"
+           onclick="openLightbox(this)">
+        <img src="wolf_spider.jpg" alt="Wolf Spider" loading="lazy" />
+        <div class="gallery-caption">Wolf Spider</div>
+      </div>
 
-        <div class="gallery-card">
-            <img src="sydney_funnel_web_spider.jpg" alt="Sydney Funnel Web Spider">
-            <h3>Funnel Web Spider</h3>
-        </div>
+      <div class="gallery-item" data-category="harmless"
+           data-src="garden_spider.jpg" data-title="Garden Spider"
+           onclick="openLightbox(this)">
+        <img src="garden_spider.jpg" alt="Garden Spider" loading="lazy" />
+        <div class="gallery-caption">Garden Spider</div>
+      </div>
 
-        <div class="gallery-card">
-            <img src="brown_recluse_spider.jpg" alt="Brown Recluse Spider">
-            <h3>Brown Recluse</h3>
-        </div>
+      <div class="gallery-item" data-category="venomous"
+           data-src="sydney_funnel_web_spider.jpg" data-title="Sydney Funnel Web Spider"
+           onclick="openLightbox(this)">
+        <img src="sydney_funnel_web_spider.jpg" alt="Funnel Web Spider" loading="lazy" />
+        <div class="gallery-caption">Funnel Web Spider</div>
+      </div>
 
-        <div class="gallery-card">
-            <img src="brazilian_wandering_spider.jpg" alt="Brazilian Wandering Spider">
-            <h3>Wandering Spider</h3>
-        </div>
+      <div class="gallery-item" data-category="venomous"
+           data-src="brown_recluse_spider.jpg" data-title="Brown Recluse"
+           onclick="openLightbox(this)">
+        <img src="brown_recluse_spider.jpg" alt="Brown Recluse" loading="lazy" />
+        <div class="gallery-caption">Brown Recluse</div>
+      </div>
 
-        <div class="gallery-card">
-            <img src="black_widow_spider.jpg" alt="Black Widow Spider">
-            <h3>Black Widow</h3>
-        </div>
+      <div class="gallery-item" data-category="venomous"
+           data-src="brazilian_wandering_spider.jpg" data-title="Brazilian Wandering Spider"
+           onclick="openLightbox(this)">
+        <img src="brazilian_wandering_spider.jpg" alt="Brazilian Wandering Spider" loading="lazy" />
+        <div class="gallery-caption">Wandering Spider</div>
+      </div>
 
-    </section>
+      <div class="gallery-item" data-category="venomous"
+           data-src="black_widow_spider.jpg" data-title="Black Widow"
+           onclick="openLightbox(this)">
+        <img src="black_widow_spider.jpg" alt="Black Widow Spider" loading="lazy" />
+        <div class="gallery-caption">Black Widow</div>
+      </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Spiders Educational Hub | All Rights Reserved</p>
-    </footer>
-<script src="script.js"></script>
+    </div><!-- /gallery-grid -->
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+      <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">✕</button>
+      <img id="lightboxImg" src="" alt="" />
+      <p class="lightbox-title" id="lightboxTitle"></p>
+    </div>
+
+    <hr class="divider" />
+
+    <ul class="info-list">
+      <li><a href="index.html">← Back to Home</a></li>
+      <li><a href="about.html">Learn About These Species</a></li>
+      <li><a href="contact.html">Have a Question? Contact Us</a></li>
+    </ul>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    © 2026 Spiders Educational Hub | All Rights Reserved &nbsp;|&nbsp;
+    <a href="contact.html">Contact</a>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    /* --- Slicer --- */
+    const slicerBtns = document.querySelectorAll('.slicer-btn');
+    const items      = document.querySelectorAll('.gallery-item');
+
+    slicerBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        slicerBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        items.forEach(item => {
+          item.classList.toggle('hidden', filter !== 'all' && item.dataset.category !== filter);
+        });
+      });
+    });
+
+    /* --- Lightbox --- */
+    function openLightbox(el) {
+      document.getElementById('lightboxImg').src   = el.dataset.src;
+      document.getElementById('lightboxImg').alt   = el.dataset.title;
+      document.getElementById('lightboxTitle').textContent = el.dataset.title;
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // Close on backdrop click
+    document.getElementById('lightbox').addEventListener('click', e => {
+      if (e.target === document.getElementById('lightbox')) closeLightbox();
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+
 </body>
 </html>
+
