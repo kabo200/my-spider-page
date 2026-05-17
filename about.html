@@ -1,158 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Spiders | Spiders Educational Hub</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Spiders | Spiders Educational Hub</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
+  <!-- ===== NAV ===== -->
+  <nav class="site-nav">
+    <a class="nav-brand" href="index.html">
+      <img src="Spider_logo.jpg" alt="Spider logo" />
+      <span>Spiders Hub</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-        <div class="logo">
-            <h1>Spiders Educational Hub</h1>
+  <!-- ===== HERO ===== -->
+  <header class="page-hero">
+    <h1>About Spiders</h1>
+    <p>Learn about species, their habitats, dangers, and essential safety tips.</p>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main class="container">
+
+    <!-- === Venomous Spiders section with slicer === -->
+    <div class="section-title">
+      <h2>Venomous Spiders</h2>
+      <p>Filter by danger level or region</p>
+    </div>
+
+    <div class="slicer-bar" role="group" aria-label="Filter venomous spiders">
+      <button class="slicer-btn active" data-filter="all">All</button>
+      <button class="slicer-btn" data-filter="americas">Americas</button>
+      <button class="slicer-btn" data-filter="oceania">Oceania</button>
+      <button class="slicer-btn" data-filter="worldwide">Worldwide</button>
+    </div>
+
+    <div class="card-grid" id="venomousGrid">
+
+      <div class="card" data-category="americas">
+        <img src="black_widow_spider.jpg" alt="Black Widow Spider" />
+        <div class="card-body">
+          <h3>Black Widow</h3>
+          <p>Recognised by its shiny black body and red hourglass mark. It has strong venom but rarely bites unless disturbed.</p>
+          <span class="card-tag tag-venomous">Americas</span>
         </div>
+      </div>
 
-        <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="about.html" class="active">About</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-
-    </header>
-
-    <!-- HERO SECTION -->
-    <section class="hero-small">
-        <h2>About Spiders</h2>
-        <p>Learn about spider species, their habitats, dangers, and safety tips.</p>
-    </section>
-
-    <!-- VENOMOUS SPIDERS -->
-    <section class="cards-section">
-
-        <h2 class="section-title">Venomous Spiders</h2>
-
-        <div class="cards-container">
-
-            <div class="card">
-                <img src="black_widow_spider.jpg" alt="Black Widow Spider">
-                <h3>Black Widow</h3>
-                <p>
-                    Recognized by its shiny black body and red hourglass mark.
-                    It has strong venom but rarely bites unless disturbed.
-                </p>
-            </div>
-
-            <div class="card">
-                <img src="brown_recluse_spider.jpg" alt="Brown Recluse Spider">
-                <h3>Brown Recluse</h3>
-                <p>
-                    Light brown spider with a violin-shaped marking.
-                    Its bite may damage skin tissue in severe cases.
-                </p>
-            </div>
-
-            <div class="card">
-                <img src="sydney_funnel_web_spider.jpg" alt="Sydney Funnel Web Spider">
-                <h3>Sydney Funnel Web</h3>
-                <p>
-                    Highly venomous spider from Australia. Often found in
-                    moist sheltered places like gardens and forests.
-                </p>
-            </div>
-
-            <div class="card">
-                <img src="brazilian_wandering_spider.jpg" alt="Brazilian Wandering Spider">
-                <h3>Brazilian Wandering Spider</h3>
-                <p>
-                    A fast active hunter that does not build webs.
-                    Known for defensive behavior and powerful venom.
-                </p>
-            </div>
-
+      <div class="card" data-category="americas">
+        <img src="brown_recluse_spider.jpg" alt="Brown Recluse Spider" />
+        <div class="card-body">
+          <h3>Brown Recluse</h3>
+          <p>Light brown with a violin-shaped marking. Its bite may damage skin tissue in severe cases.</p>
+          <span class="card-tag tag-venomous">Americas</span>
         </div>
+      </div>
 
-    </section>
-
-    <!-- INFORMATION SECTION -->
-    <section class="info-section">
-
-        <h2 class="section-title">Spider Facts & Knowledge</h2>
-
-        <div class="info-grid">
-
-            <div class="box">
-                <h3>What Are Spiders?</h3>
-                <p>
-                    Spiders are arachnids with eight legs and two body parts.
-                    They help control insects by feeding on them.
-                </p>
-            </div>
-
-            <div class="box">
-                <h3>Where Do Spiders Live?</h3>
-                <p>
-                    Spiders live in forests, grasslands, deserts,
-                    gardens, and homes across the world.
-                </p>
-            </div>
-
-            <div class="box">
-                <h3>Dangers of Spiders</h3>
-                <p>
-                    Most spiders are harmless, but some venomous species
-                    may cause serious medical reactions.
-                </p>
-            </div>
-
-            <div class="box">
-                <h3>Interesting Facts</h3>
-                <p>
-                    There are over 48,000 known spider species and they
-                    are found on every continent except Antarctica.
-                </p>
-            </div>
-
-            <div class="box">
-                <h3>Did You Know?</h3>
-                <p>
-                    Some spiders can live for several years and large
-                    species may have a leg span of 30 cm.
-                </p>
-            </div>
-
-            <div class="box">
-                <h3>Safety Tips</h3>
-                <p>
-                    Stay calm when encountering spiders. Avoid touching
-                    them and contact pest professionals if needed.
-                </p>
-            </div>
-
+      <div class="card" data-category="oceania">
+        <img src="sydney_funnel_web_spider.jpg" alt="Sydney Funnel Web Spider" />
+        <div class="card-body">
+          <h3>Sydney Funnel Web</h3>
+          <p>Highly venomous spider from Australia. Often found in moist sheltered places like gardens and forests.</p>
+          <span class="card-tag tag-venomous">Oceania</span>
         </div>
+      </div>
 
-    </section>
+      <div class="card" data-category="worldwide">
+        <img src="brazilian_wandering_spider.jpg" alt="Brazilian Wandering Spider" />
+        <div class="card-body">
+          <h3>Brazilian Wandering Spider</h3>
+          <p>A fast active hunter that does not build webs. Known for defensive behaviour and powerful venom.</p>
+          <span class="card-tag tag-venomous">Worldwide</span>
+        </div>
+      </div>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <p>&copy; 2026 Spiders Educational Hub | All Rights Reserved</p>
-    </footer>
-<script src="script.js"></script>
+    </div><!-- /card-grid -->
+
+    <hr class="divider" />
+
+    <!-- === Accordion Knowledge Section === -->
+    <div class="section-title">
+      <h2>Spider Facts &amp; Knowledge</h2>
+      <p>Click any topic to expand</p>
+    </div>
+
+    <div class="accordion" id="factsAccordion">
+
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          What Are Spiders?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          Spiders are arachnids with eight legs and two body parts: the cephalothorax and the abdomen.
+          Unlike insects which have six legs, spiders belong to the class Arachnida. They help control insect
+          populations by feeding on them and play a crucial role in ecosystem balance worldwide.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          Where Do Spiders Live?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          Spiders are incredibly adaptable. They live in forests, grasslands, deserts, mountains, wetlands,
+          gardens, and even inside our homes. They have colonised every continent on Earth except Antarctica,
+          making them one of the most widespread predators in the animal kingdom.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          Dangers of Spiders
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          Most of the world's 48,000+ spider species are completely harmless to humans. However, a small number —
+          such as the Black Widow, Brown Recluse, and Sydney Funnel Web — possess venom capable of causing serious
+          medical reactions. Deaths from spider bites are very rare when medical treatment is available promptly.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          Interesting Facts
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          There are over 48,000 known spider species found on every continent except Antarctica. Spider silk is
+          one of the strongest natural materials known — weight for weight, stronger than steel. Some species can
+          live for 20+ years, and the Goliath Birdeater tarantula can have a leg span of up to 30 cm.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          Did You Know?
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          Spiders are not insects — they are arachnids. Spiders have up to eight eyes, though many species have
+          poor vision. Jumping spiders, however, have exceptional eyesight. Some spiders can walk on water,
+          and certain aquatic species even build air-bubble "diving bells" to live underwater.
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          Safety Tips
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-body">
+          Stay calm when you encounter a spider — they are far more afraid of you. Avoid touching unfamiliar
+          species with bare hands. Shake out shoes, gloves, and clothing left outdoors. Seal cracks and gaps
+          around windows and doors. If bitten by a spider you suspect is venomous, seek medical attention
+          immediately and try to safely photograph it for identification.
+        </div>
+      </div>
+
+    </div><!-- /accordion -->
+
+    <hr class="divider" />
+
+    <!-- Nav links -->
+    <ul class="info-list">
+      <li><a href="index.html">← Back to Home</a></li>
+      <li><a href="gallery.html">View the Spider Gallery</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    © 2026 Spiders Educational Hub | All Rights Reserved &nbsp;|&nbsp;
+    <a href="contact.html">Contact</a>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    /* --- Slicer filter (venomous grid) --- */
+    const slicerBtns = document.querySelectorAll('.slicer-btn');
+    const cards      = document.querySelectorAll('#venomousGrid .card');
+
+    slicerBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        slicerBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        cards.forEach(card => {
+          card.classList.toggle('hidden', filter !== 'all' && card.dataset.category !== filter);
+        });
+      });
+    });
+
+    /* --- Accordion --- */
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const isOpen   = header.classList.contains('open');
+        const body     = header.nextElementSibling;
+        // close all
+        document.querySelectorAll('.accordion-header').forEach(h => {
+          h.classList.remove('open');
+          h.setAttribute('aria-expanded', 'false');
+          h.nextElementSibling.classList.remove('open');
+        });
+        // toggle clicked
+        if (!isOpen) {
+          header.classList.add('open');
+          header.setAttribute('aria-expanded', 'true');
+          body.classList.add('open');
+        }
+      });
+    });
+  </script>
+
 </body>
-
 </html>
- 
- 
-
-
-
-
-
 
 
     
