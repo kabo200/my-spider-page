@@ -1,65 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Spider Educational Hub</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Spiders Educational Hub</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<header>
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-    </nav>
-</header>
+  <!-- ===== NAV ===== -->
+  <nav class="site-nav">
+    <a class="nav-brand" href="index.html">
+      <img src="Spider_logo.jpg" alt="Spider logo" />
+      <span>Spiders Hub</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
 
-<main class="contact-container">
-
+  <!-- ===== HERO ===== -->
+  <header class="page-hero">
     <h1>Contact Us</h1>
+    <p>Have a question about spiders or this website? Send us a message below.</p>
+  </header>
 
-    <p>If you have questions about spiders or this website, send us a message below:</p>
+  <!-- ===== MAIN ===== -->
+  <main class="container">
 
-    <!-- CONTACT FORM -->
-    <form class="contact-form">
+    <!-- Slicer: choose topic -->
+    <div class="section-title">
+      <h2>Get in Touch</h2>
+      <p>Select a topic so we can respond more quickly</p>
+    </div>
 
-        <label for="name">Full Name</label>
-        <input type="text" id="name" placeholder="Enter your name" required>
+    <div class="slicer-bar" id="topicSlicer" role="group" aria-label="Select message topic">
+      <button class="slicer-btn active" data-topic="General Enquiry">General Enquiry</button>
+      <button class="slicer-btn" data-topic="Spider Identification">Spider ID</button>
+      <button class="slicer-btn" data-topic="Safety Question">Safety Question</button>
+      <button class="slicer-btn" data-topic="Website Feedback">Site Feedback</button>
+    </div>
 
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Enter your email" required>
+    <div class="contact-wrapper">
 
-        <label for="message">Message</label>
-        <textarea id="message" rows="5" placeholder="Write your message..." required></textarea>
+      <!-- === FORM ===
+           Uses Formspree to forward messages to kabogabathuse9@gmail.com
+           Replace YOUR_FORM_ID below with the ID you get from formspree.io after signing up.
+           Steps:
+             1. Go to https://formspree.io and create a free account.
+             2. Create a new form with the email kabogabathuse9@gmail.com.
+             3. Copy your form ID (looks like "xdkozpaj") and paste it into the action URL below.
+      -->
+      <div class="contact-form" id="formWrapper">
+        <form
+          id="contactForm"
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST"
+          onsubmit="handleSubmit(event)"
+        >
+          <!-- Hidden field: routes to kabogabathuse9@gmail.com -->
+          <input type="hidden" name="_replyto" value="kabogabathuse9@gmail.com" />
+          <!-- Pre-filled topic from slicer -->
+          <input type="hidden" name="topic" id="hiddenTopic" value="General Enquiry" />
 
-        <button type="submit">Send Message</button>
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input
+              type="text"
+              id="fullName"
+              name="name"
+              placeholder="Your full name"
+              required
+            />
+          </div>
 
-    </form>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="your@email.com"
+              required
+            />
+          </div>
 
-    <!-- LINKS SECTION -->
-    <section class="learn-more">
-        <h2>Learn More About Spiders</h2>
+          <div class="form-group">
+            <label for="topicDisplay">Topic</label>
+            <input
+              type="text"
+              id="topicDisplay"
+              value="General Enquiry"
+              readonly
+              style="cursor:default; opacity:0.7;"
+            />
+          </div>
 
-        <ul>
-            <li><a href="https://www.nationalgeographic.com/animals/invertebrates/facts/spiders" target="_blank">National Geographic</a></li>
-            <li><a href="https://www.britannica.com/animal/spider-arachnid" target="_blank">Britannica</a></li>
-            <li><a href="https://australian.museum/learn/animals/spiders/" target="_blank">Australian Museum</a></li>
-            <li><a href="https://www.livescience.com/topics/spiders" target="_blank">Live Science</a></li>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Write your message here…"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+
+        <!-- Success message shown after submit -->
+        <div class="form-success" id="formSuccess">
+          ✓ Message sent! We'll reply to you shortly.
+        </div>
+      </div><!-- /contact-form -->
+
+      <!-- === SIDE INFO === -->
+      <aside>
+        <div class="section-title" style="text-align:left; margin-bottom:1.2rem;">
+          <h2 style="font-size:1rem;">Learn More</h2>
+          <p>Trusted external resources</p>
+        </div>
+
+        <ul class="info-list">
+          <li><a href="https://www.nationalgeographic.com/animals/invertebrates/facts/spiders" target="_blank" rel="noopener">National Geographic – Spiders</a></li>
+          <li><a href="https://www.britannica.com/animal/spider-arachnid" target="_blank" rel="noopener">Britannica – Spider Arachnid</a></li>
+          <li><a href="https://australian.museum/learn/animals/spiders/" target="_blank" rel="noopener">Australian Museum – Spiders</a></li>
+          <li><a href="https://www.livescience.com/topics/spiders" target="_blank" rel="noopener">Live Science – Spider Topics</a></li>
         </ul>
-    </section>
 
-</main>
+        <hr class="divider" style="margin:1.5rem 0;" />
 
-<footer>
-    <p>&copy; 2026 Spiders Educational Hub</p>
-</footer>
+        <div class="section-title" style="text-align:left; margin-bottom:1.2rem;">
+          <h2 style="font-size:1rem;">Explore the Site</h2>
+        </div>
+
+        <ul class="info-list">
+          <li><a href="index.html">Home – Spider Species</a></li>
+          <li><a href="about.html">About – Facts &amp; Safety</a></li>
+          <li><a href="gallery.html">Gallery – Photo Collection</a></li>
+        </ul>
+      </aside>
+
+    </div><!-- /contact-wrapper -->
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    © 2026 Spiders Educational Hub | All Rights Reserved &nbsp;|&nbsp;
+    <a href="mailto:kabogabathuse9@gmail.com">kabogabathuse9@gmail.com</a>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    /* --- Topic slicer updates hidden field + display field --- */
+    document.querySelectorAll('#topicSlicer .slicer-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('#topicSlicer .slicer-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const topic = btn.dataset.topic;
+        document.getElementById('hiddenTopic').value  = topic;
+        document.getElementById('topicDisplay').value = topic;
+      });
+    });
+
+    /* --- Form submission with Formspree --- */
+    async function handleSubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('contactForm');
+      const data = new FormData(form);
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          form.style.display = 'none';
+          document.getElementById('formSuccess').style.display = 'block';
+        } else {
+          // Fallback: open mail client
+          const name    = encodeURIComponent(document.getElementById('fullName').value);
+          const topic   = encodeURIComponent(document.getElementById('hiddenTopic').value);
+          const message = encodeURIComponent(document.getElementById('message').value);
+          window.location.href =
+            `mailto:kabogabathuse9@gmail.com?subject=${topic}%20from%20${name}&body=${message}`;
+        }
+      } catch {
+        // Network error fallback: mailto
+        const name    = encodeURIComponent(document.getElementById('fullName').value);
+        const topic   = encodeURIComponent(document.getElementById('hiddenTopic').value);
+        const message = encodeURIComponent(document.getElementById('message').value);
+        window.location.href =
+          `mailto:kabogabathuse9@gmail.com?subject=${topic}%20from%20${name}&body=${message}`;
+      }
+    }
+  </script>
 
 </body>
 </html>
