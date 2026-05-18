@@ -1,29 +1,25 @@
 
-/* ===========================
-   SPIDERS EDUCATIONAL HUB
-   style.css
-   =========================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
 
-/* ---------- CSS Variables ---------- */
+/*  CSS Variables  */
 :root {
-  --bg:        #0d0d0f;
-  --surface:   #141418;
-  --surface2:  #1c1c22;
-  --border:    #2a2a35;
-  --accent:    #c8a84b;       /* warm gold */
-  --accent2:   #7e3b3b;       /* deep crimson */
-  --text:      #e8e4dc;
-  --muted:     #8a8578;
-  --white:     #ffffff;
-  --radius:    10px;
+  --bg:      #0d0d0f;
+  --surface:  #141418;
+  --surface2:#1c1c22;
+  --border:  #2a2a35;
+  --accent:  #c8a84b;       /* warm gold */
+  --accent2: #7e3b3b;       /* deep crimson */
+  --text:    #e8e4dc;
+  --muted:   #8a8578;
+  --white:   #ffffff;
+  --radius:   10px;
   --transition: 0.3s ease;
-  --shadow:    0 4px 30px rgba(0,0,0,0.6);
-  --glow:      0 0 20px rgba(200,168,75,0.25);
+  --shadow:   0 4px 30px rgba(0,0,0,0.6);
+  --glow:   0 0 20px rgba(200,168,75,0.25);
 }
 
-/* ---------- Reset & Base ---------- */
+/ Reset & Base  /
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
