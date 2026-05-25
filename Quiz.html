@@ -1,28 +1,28 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spider Quiz - Educational Hub</title>
+    <title>Spider Quiz - be inspired</title>
     <style>
-        /* Basic clean layout to match an educational theme */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var (--bg)
+            background-color: var(--bg);
             color: #333;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: #2c3e50;
+            background-color: light brown;
             color: white;
             padding: 20px text-align;
             text-align: center;
         }
 
         nav {
-            background-color: #34495e;
+            background-color: var(--bg);
             text-align: center;
             padding: 10px 0;
         }
@@ -88,7 +88,7 @@
             border-color: #34495e;
         }
 
-        /* Results Screen View */
+    
         .results-card {
             text-align: center;
             display: none;
@@ -140,16 +140,16 @@
     </nav>
 
     <div class="container">
-        <!-- Quiz Active Screen -->
+        
         <div id="quiz-box">
             <div class="quiz-progress" id="progress">Question 1 of 4</div>
             <div class="question" id="question-text">Loading question...</div>
             <div class="options-container" id="options-box">
-                <!-- Buttons will be generated dynamically by JavaScript -->
+                
             </div>
         </div>
 
-        <!-- Quiz Results Screen -->
+
         <div id="results-box" class="results-card">
             <h2>Quiz Completed!</h2>
             <p>Your spider knowledge score is:</p>
@@ -164,7 +164,7 @@
     </footer>
 
     <script>
-        // Quiz Data array containing questions, choices, and correct answers
+    
         const quizData = [
             {
                 question: "How many legs do spiders typically have?",
@@ -207,15 +207,15 @@
             progressEl.textContent = `Question ${currentQuestionIndex + 1} of ${quizData.length}`;
             questionTextEl.textContent = currentQuestion.question;
             
-            // Clear out old option buttons
+        
             optionsBoxEl.innerHTML = "";
             
-            // Loop through options and create buttons dynamically
+        
             currentQuestion.options.forEach((option, index) => {
                 const button = document.createElement("button");
                 button.classList.add("option-btn");
                 button.textContent = option;
-                // Add click listener to check answers
+                
                 button.addEventListener("click", () => handleAnswer(index));
                 optionsBoxEl.appendChild(button);
             });
@@ -224,12 +224,12 @@
         function handleAnswer(selectedIndex) {
             const currentQuestion = quizData[currentQuestionIndex];
             
-            // Check if user clicked the correct index
+            
             if (selectedIndex === currentQuestion.correct) {
                 score++;
             }
             
-            // Move to next question or show results
+            
             currentQuestionIndex++;
             if (currentQuestionIndex < quizData.length) {
                 loadQuestion();
@@ -239,13 +239,13 @@
         }
 
         function showResults() {
-            // Hide quiz, reveal results elements
+            
             quizBoxEl.style.display = "none";
             resultsBoxEl.style.display = "block";
             
             finalScoreEl.textContent = `${score} / ${quizData.length}`;
             
-            // Tailor the feedback text based on performance
+            
             if (score === quizData.length) {
                 feedbackTextEl.textContent = "Flawless! You're an absolute spider expert! 🕷️";
             } else if (score >= quizData.length / 2) {
@@ -263,7 +263,7 @@
             loadQuestion();
         }
 
-        // Initialize quiz on page load
+        
         loadQuestion();
     </script>
 </body>
